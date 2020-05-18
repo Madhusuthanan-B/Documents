@@ -55,3 +55,7 @@ $ docker version
 ```
 $ docker run --name webapp nginx:1.14-alpine
 ```
+
+##### Notes
+* We cannot delete an image when it is being used by a container. 
+* In such case, we need to stop the container and then delete the image 
