@@ -15,6 +15,11 @@ $ docker run IMAGE_NAME
 $ docker ps
 ```
 
+#### List all containers including running and non-running
+```shell
+$ docker ps -a
+```
+
 #### Remove a container (This will reclaim disk space)
 ```shell
 $ docker rm CONTAINER_ID_OR_CONTAINER_NAME
@@ -39,4 +44,14 @@ $ docker rmi IMAGE_NAME
 #### How to execute commands on a running container (For example, want to view a file within a container)?
 ```shell
 $ docker exec CONTAINER_NAME EXECUTE_THE_COMMAND_HERE
+```
+
+#### Find the version of Docker Server Engine running in the host
+```
+$ docker version
+```
+
+#### Run a container with the nginx:1.14-alpine image and name it webapp
+```
+$ docker run --name webapp nginx:1.14-alpine
 ```
