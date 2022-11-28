@@ -56,6 +56,13 @@ $ docker version
 $ docker run --name webapp nginx:1.14-alpine
 ```
 
+#### Port mapping (Multiple instancecs of same app can be mapped to different ports and ran simultaneously)
+```
+$ docker run -p 80:5000 kodekloud/webapp
+  docker run -p 8000:5000 kodekloud/webapp
+  docker run -p 8001:5000 kodekloud/webapp
+```
+
 ##### Notes
 * We cannot delete an image when it is being used by a container. 
 * In such case, we need to stop the container and then delete the image 
