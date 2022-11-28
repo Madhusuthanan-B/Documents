@@ -63,6 +63,11 @@ $ docker run -p 80:5000 kodekloud/webapp
   docker run -p 8001:5000 kodekloud/webapp
 ```
 
+#### Volume mapping (left side of colon represents the directory within container, right side represents external)
+```
+$ docker run -v /opt/datadir:/var/lib/mysql mysql
+```
+
 ##### Notes
 * We cannot delete an image when it is being used by a container. 
 * In such case, we need to stop the container and then delete the image 
