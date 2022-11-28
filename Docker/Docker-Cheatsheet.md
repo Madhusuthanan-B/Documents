@@ -68,6 +68,12 @@ $ docker run -p 80:5000 kodekloud/webapp
 $ docker run -v /opt/datadir:/var/lib/mysql mysql
 ```
 
+#### Passing an environment variable in docker
+```
+$ docker run -e SAMPLE_ENV_VARIABLE=blue simple-webapp
+ docker run -e SAMPLE_ENV_VARIABLE=red simple-webapp
+```
+
 ##### Notes
 * We cannot delete an image when it is being used by a container. 
 * In such case, we need to stop the container and then delete the image 
